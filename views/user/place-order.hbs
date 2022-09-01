@@ -1,0 +1,468 @@
+
+ <div class="main-wrapper main-wrapper-2">
+        <header class="header-area header-responsive-padding header-height-1">
+            <div class="header-top d-none d-lg-block bg-gray">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-6">
+                            <div class="welcome-text">
+                                
+                                {{#if user}}
+                                <p>welocome {{user.name}}</p>
+                                 {{else}}
+                                <p>welcome please login ! </p>
+                                 {{/if}}
+                            </div>
+                        </div>
+                        {{!-- <div class="col-lg-6 col-6">
+                            <div class="language-currency-wrap">
+                                <div class="currency-wrap border-style">
+                                    <a class="currency-active" href="#">$ Dollar (US) <i class=" ti-angle-down "></i></a>
+                                    <div class="currency-dropdown">
+                                        <ul>
+                                            <li><a href="#">Taka (BDT) </a></li>
+                                            <li><a href="#">Riyal (SAR) </a></li>
+                                            <li><a href="#">Rupee (INR) </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="language-wrap">
+                                    <a class="language-active" href="#"><img src="assets/images/icon-img/flag.png" alt=""> English <i class=" ti-angle-down "></i></a>
+                                    <div class="language-dropdown">
+                                        <ul>
+                                            <li><a href="#"><img src="assets/images/icon-img/flag.png" alt="">English </a></li>
+                                            <li><a href="#"><img src="assets/images/icon-img/spanish.png" alt="">Spanish</a></li>
+                                            <li><a href="#"><img src="assets/images/icon-img/arabic.png" alt="">Arabic </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom sticky-bar">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-6 col-6">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/images/logo/logo.png" height="130rem" width="130rem" alt="logo"></a>
+                            </div>
+                        </div>
+                                                <div class="col-lg-6 d-none d-lg-block d-flex justify-content-center">
+                            <div class="main-menu text-center">
+                                <nav>
+                                    <ul>
+                                        <li><a href="/show-allproducts">PRODUCTS</a>
+                                        </li>
+                                        <li><a href="shop.html">MEN</a>
+                                            <ul class="mega-menu-style mega-menu-mrg-1">
+                                                <li>
+                                                    <ul>
+                                                        <li>
+                                                            <a class="dropdown-title" href="#">Shop Layout</a>
+                                                            <ul>
+                                                                <li><a href="shop.html">standard style</a></li>
+                                                                <li><a href="shop-sidebar.html">shop grid sidebar</a></li>
+                                                                <li><a href="shop-list.html">shop list style</a></li>
+                                                                <li><a href="shop-list-sidebar.html">shop list sidebar</a></li>
+                                                                <li><a href="shop-right-sidebar.html">shop right sidebar</a></li>
+                                                                <li><a href="shop-location.html">store location</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-title" href="#">Products Layout</a>
+                                                            <ul>
+                                                                <li><a href="product-details.html">tab style 1</a></li>
+                                                                <li><a href="product-details-2.html">tab style 2</a></li>
+                                                                <li><a href="product-details-gallery.html">gallery style </a></li>
+                                                                <li><a href="product-details-affiliate.html">affiliate style</a></li>
+                                                                <li><a href="product-details-group.html">group style</a></li>
+                                                                <li><a href="product-details-fixed-img.html">fixed image style </a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop.html"><img src="assets/images/banner/menu.png" alt=""></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="shop.html">WOMEN</a>
+                                            <ul class="mega-menu-style mega-menu-mrg-1">
+                                                <li>
+                                                    <ul>
+                                                        <li>
+                                                            <a class="dropdown-title" href="#">Shop Layout</a>
+                                                            <ul>
+                                                                <li><a href="shop.html">standard style</a></li>
+                                                                <li><a href="shop-sidebar.html">shop grid sidebar</a></li>
+                                                                <li><a href="shop-list.html">shop list style</a></li>
+                                                                <li><a href="shop-list-sidebar.html">shop list sidebar</a></li>
+                                                                <li><a href="shop-right-sidebar.html">shop right sidebar</a></li>
+                                                                <li><a href="shop-location.html">store location</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-title" href="#">Products Layout</a>
+                                                            <ul>
+                                                                <li><a href="product-details.html">tab style 1</a></li>
+                                                                <li><a href="product-details-2.html">tab style 2</a></li>
+                                                                <li><a href="product-details-gallery.html">gallery style </a></li>
+                                                                <li><a href="product-details-affiliate.html">affiliate style</a></li>
+                                                                <li><a href="product-details-group.html">group style</a></li>
+                                                                <li><a href="product-details-fixed-img.html">fixed image style </a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop.html"><img src="assets/images/banner/menu.png" alt=""></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="shop.html">KIDS</a>
+                                            <ul class="mega-menu-style mega-menu-mrg-1">
+                                                <li>
+                                                    <ul>
+                                                        <li>
+                                                            <a class="dropdown-title" href="#">Shop Layout</a>
+                                                            <ul>
+                                                                <li><a href="shop.html">standard style</a></li>
+                                                                <li><a href="shop-sidebar.html">shop grid sidebar</a></li>
+                                                                <li><a href="shop-list.html">shop list style</a></li>
+                                                                <li><a href="shop-list-sidebar.html">shop list sidebar</a></li>
+                                                                <li><a href="shop-right-sidebar.html">shop right sidebar</a></li>
+                                                                <li><a href="shop-location.html">store location</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-title" href="#">Products Layout</a>
+                                                            <ul>
+                                                                <li><a href="product-details.html">tab style 1</a></li>
+                                                                <li><a href="product-details-2.html">tab style 2</a></li>
+                                                                <li><a href="product-details-gallery.html">gallery style </a></li>
+                                                                <li><a href="product-details-affiliate.html">affiliate style</a></li>
+                                                                <li><a href="product-details-group.html">group style</a></li>
+                                                                <li><a href="product-details-fixed-img.html">fixed image style </a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop.html"><img src="assets/images/banner/menu.png" alt=""></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="about-us.html">ABOUT</a></li>
+                                        <li><a href="contact-us.html">CONTACT US</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                       <div class="col-lg-3 col-md-6 col-6">
+                            <div class="header-action-wrap">
+                                <div class="header-action-style header-search-1">
+                                    {{!-- <a class="search-toggle" href="#">
+                                        <i class="pe-7s-search s-open"></i>
+                                        <i class="pe-7s-close s-close"></i>
+                                    </a> --}}
+                                    {{!-- <button style="border: none;" class="bg-white text-small"> --}}
+                                        {{#if user}}
+                                         <a href="/logout">LOGOUT</a>
+                                        {{else}}
+                                        <a href="/user_signin">LOGIN</a>
+                                        {{/if}}
+                                        {{!-- </button> --}}
+                                        
+                                    <div class="search-wrap-1">
+                                        <form action="#">
+                                            <input placeholder="Search products…" type="text">
+                                            <button class="button-search"><i class="pe-7s-search"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                {{!-- <div class="header-action-style">
+                                    {{#if user}}
+                                              <a title="Logout Register" href="/logout"><i class="pe-7s-user"></i></a>
+                                 
+                                    {{else}}
+                                       <a title="Login Register" href="view_product"></a>"><i class="pe-7s-user"></i></a>
+                          
+                                  
+                                    {{/if}}
+                                </div> --}}
+                                <div class="header-action-style">
+                                    <a title="Wishlist" href="wishlist.html"><i class="pe-7s-like"></i></a>
+                                </div>
+                                <div class="header-action-style">
+                                    <a title="profile page" href="/profile"><i class="pe-7s-user"></i></a>
+                                    </div>
+                                <div class="header-action-style header-action-cart">
+                                    <a class="cart-active" href="#"><i class="pe-7s-shopbag"></i>
+                                        <span class="product-count bg-black">01</span>
+                                    </a>
+                                </div>
+                                <div class="header-action-style d-block d-lg-none">
+                                    <a class="mobile-menu-active-button" href="#"><i class="pe-7s-menu"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- mini cart start -->
+        <div class="sidebar-cart-active">
+            <div class="sidebar-cart-all">
+                <a class="cart-close" href="#"><i class="pe-7s-close"></i></a>
+                <div class="cart-content">
+                    <h3>Shopping Cart</h3>
+                    <ul>
+                    </ul>
+                    <div class="cart-total">
+                        <h4>Subtotal: <span>$170.00</span></h4>
+                    </div>
+                    <div class="cart-btn btn-hover">
+                        <a class="theme-color" href="/user-cart">view cart</a>
+                    </div>
+                    <div class="checkout-btn btn-hover">
+                        <a class="theme-color" href="checkout.html">checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="breadcrumb-area bg-gray-4 breadcrumb-padding-1">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <h2>Checkout </h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="ti-angle-right"></i></li>
+                        <li>Checkout </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="breadcrumb-img-1">
+                <img src="assets/images/banner/breadcrumb-1.png" alt="">
+            </div>
+            <div class="breadcrumb-img-2">
+                <img src="assets/images/banner/breadcrumb-2.png" alt="">
+            </div>
+        </div>
+        <div class="checkout-main-area pb-100 pt-100">
+            <div class="container">
+                <div class="customer-zone mb-20">
+                    <p class="cart-page-title">Returning customer? <a class="checkout-click1" href="/user_signin">Click here to login</a></p>
+                    <div class="checkout-login-info">
+                        <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing & Shipping section.</p>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="sin-checkout-login">
+                                        <label>Username or email address <span>*</span></label>
+                                        <input type="text" name="user-name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="sin-checkout-login">
+                                        <label>Passwords <span>*</span></label>
+                                        <input type="password" name="user-password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-remember-wrap">
+                                <button class="button" type="submit">Login</button>
+                                <div class="checkout-login-toggle-btn">
+                                    <input type="checkbox">
+                                    <label>Remember me</label>
+                                </div>
+                            </div>
+                            <div class="lost-password">
+                                <a href="#">Lost your password?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="customer-zone mb-20">
+                    <p class="cart-page-title">Have a coupon? <a class="checkout-click3" href="#">Click here to enter your code</a></p>
+                    <div class="checkout-login-info3">
+                        <form action="">
+                            <input type="text" placeholder="Coupon code">
+                            <input type="submit" value="Apply Coupon">
+                        </form>
+                    </div>
+                </div>
+                <form action=""  id="checkout-form">
+                <div class="checkout-wrap pt-30">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="billing-info-wrap">
+                                <h3>Billing Details</h3>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="billing-info mb-20">
+                                            <label> Name <abbr class="required" title="required">*</abbr></label>
+                                            <input type="text" id="Name" name="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="billing-info mb-20">
+                                            <label> Address <abbr class="required" title="required">*</abbr></label>
+                                            <input class="billing-address"id="address"name="address" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="billing-info mb-20">
+                                            <label>Pincode <abbr class="required" title="required">*</abbr></label>
+                                            <input type="text" id="pincode" name="pincode">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="billing-info mb-20">
+                                            <label>Mobile <abbr class="required" title="required">*</abbr></label>
+                                            <input type="text" id="mobile" name="mobile">
+                                        </div>
+                                    </div>
+                                    <input type="text" id="" name="userId" value="{{user._id}}"hidden>
+                                </div>
+                                <div class="checkout-account mt-25">
+                                    <input class="checkout-toggle" type="checkbox">
+                                    <span>Ship to a existing address?</span>
+                                </div>
+                                 {{#each address}}
+                                           <div class="pay-top sin-payment">
+                                            <input id="payment-method" class="input-radio" type="radio" value="{{this.id}}" name="payment-address">
+                                            <label for="payment-method-3"> {{this.name}}  </label>
+                                            <div class="payment-box payment_method_bacs">
+                                             <p>{{this.address}} <br>
+                                            {{this.pincode}} <br> 
+                                            {{this.city}}<br></p>
+                                            </div>
+                                            </div>
+                                           {{/each}}
+                                 
+
+                                            
+                                {{!-- <div class="additional-info-wrap">
+                                    <label>Order notes</label>
+                                    <textarea placeholder="Notes about your order, e.g. special notes for delivery. " name="message"></textarea>
+                                </div> --}}
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="your-order-area">
+                                <h3>Your order</h3>
+                                <div class="your-order-wrap gray-bg-4">
+                                    <div class="your-order-info-wrap">
+                                        <div class="your-order-info">
+                                            <ul>
+                                                <li>Product <span>Total</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="your-order-info order-total">
+                                            <ul>
+                                                <li><span>₹{{total}} </span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method">
+                                         <div class="pay-top sin-payment">
+                                            <input id="payment-method" class="input-radio" type="radio" value="COD" name="payment-method">
+                                            <label for="payment-method-3">Cash on delivery </label>
+                                            <div class="payment-box payment_method_bacs">
+                                                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.</p>
+                                            </div>
+                                            </div>
+                                        <div class="pay-top sin-payment">
+                                            <input id="payment-method" class="input-radio" type="radio" value="ONLINE" checked="checked" name="payment-method">
+                                            <label for="payment_method_1"> Direct Bank Transfer </label>
+                                            <div class="payment-box payment_method_bacs">
+                                            <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.</p>
+                                            </div>
+                                            </div>
+                                        <div class="pay-top sin-payment sin-payment-3">
+                                            <input id="payment-method" class="input-radio" type="radio" value="PAYPAL" name="payment-method">
+                                            <label for="payment-method-4">PayPal <img alt="" src="assets/images/icon-img/payment.png"><a href="#">What is PayPal?</a></label>
+                                            <div class="payment-box payment_method_bacs">
+                                                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.</p>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="Place-order border-0 btn-hover">
+                                <a href="#"><button type="submit" class=" border-0 bg-transparent">Place Order</button> </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <footer class="footer-area">
+            <div class="bg-gray-2">
+                <div class="container">
+                    <div class="footer-top pt-80 pb-35">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-about mb-40">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, cons adipi elit, sed do eiusmod tempor incididunt ut aliqua.</p>
+                                    <div class="payment-img">
+                                        <a href="#"><img src="assets/images/icon-img/payment.png" alt="logo"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-widget-margin-1 footer-list mb-40">
+                                    <h3 class="footer-title">Information</h3>
+                                    <ul>
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="#">Delivery Information</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms & Conditions</a></li>
+                                        <li><a href="#">Customer Service</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-list mb-40">
+                                    <h3 class="footer-title">My Accound</h3>
+                                    <ul>
+                                        <li><a href="my-account.html">My Account</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                        <li><a href="wishlist.html">Wish List</a></li>
+                                        <li><a href="#">Newsletter</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-widget-margin-2 footer-address mb-40">
+                                    <h3 class="footer-title">Get in touch</h3>
+                                    <ul>
+                                        <li><span>Address: </span>Your address goes here </li>
+                                        <li><span>Telephone Enquiry:</span> (012) 345 6789</li>
+                                        <li><span>Email: </span>demo@example.com</li>
+                                    </ul>
+                                    <div class="open-time">
+                                        <p>Open : <span>8:00 AM</span> - Close : <span>18:00 PM</span></p>
+                                        <p>Saturday - Sunday : Close</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  <script src="/javascripts/ajax.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        
+         
