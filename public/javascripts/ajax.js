@@ -155,88 +155,87 @@ function deleteAddress(id){
     }
 
 
-    function cancelOrder(orderId, proId,response) {
+    function cancelOrderUser(proId) {
+      // event.preventDefault
+      
+     
       swal({
-          title: "Are you sure?",
-          text: "you are going to cancel your order!",
-          icon: "warning",
+          title: "Order cancel",
+          text: "Once cancel, the order get cancelled",
+          icon: "info",
           buttons: true,
           dangerMode: true,
-      })
-          .then((willDelete) => {
-              if (willDelete) {
-                  $.ajax({
-                      url: '/cancel_order',
-                      data: {
-                          order: orderId,
-                          product: proId
-                      },
-  
-                      method: 'post',
-                      success: (response) => {
-                          swal("Poof! Your order has been cancelled!", {
-                              icon: "success",
-                          });
-  
-                          location.reload()
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+              $.ajax({
+                  url: '/cancel_order/' + proId,
+                  method: 'get',
+                  success: (response) => {
+                     
+                      if(response){
+                          document.getElementById(proId).innerHTML = "cancelled"
+                          swal("order cancelled", "sucessfully", "success");
+                        
+                          // location.reload()
+                      
                       }
-                  })
-  
-  
-              } else {
-                  swal("Your product is safe!");
-              }
-          });
+                         
+          
+                  
+                      
+                      
+                  }
+              })
+          } else {
+            swal("Your order safe");
+          }
+        })
   
   }
-  // function removeProductFromCart(id){
-  //    alert('deletejhkajkdck')
-  //   $.ajax({
-  //     url:'/delete_cart'+id,
-  //     method:'get',
-  //     success: (response) => {
-
-  //       if(response){
-  //      swal("Poof! Your imaginary file has been deleted!")
-    
-  //      location.reload()
-  //       }
-  //     }
-  //   })
-  // }
 
   
-  function removeProductFromCart(id) {
+
+
+ 
+  function removeProductFromCart(ProId) {
+    // event.preventDefault
+    
+   
     swal({
-        title: "Are you sure?",
-        text: "Once deleted, you will not be able to recover this product !",
-        icon: "warning",
+        title: "Product remove",
+        text: "Once remived, the product get removed from cart",
+        icon: "info",
         buttons: true,
         dangerMode: true,
-    })
-        .then((willDelete) => {
-            if (willDelete) {
-                $.ajax({
-                    url: '/delete_cart'+id,
-
-                    method: 'get',
-                    success: (response) => {
-                        swal("Poof! Your product has been deleted!", {
-                            icon: "success",
-                        });
-
-                        location.reload()
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+            $.ajax({
+                url: '/delete_cart/'+ProId,
+                method: 'get',
+                success: (response) => {
+                   
+                    if(response){
+                        document.getElementById(ProId).innerHTML = "cancelled"
+                        swal("Product removed", "sucessfully", "success");
+                      
+                        // location.reload()
+                    
                     }
-                })
-
-
-            } else {
-                swal("Your product is safe!");
-            }
-        });
+                       
+        
+                
+                    
+                    
+                }
+            })
+        } else {
+          swal("Your order safe");
+        }
+      })
 
 }
-
 
 
 

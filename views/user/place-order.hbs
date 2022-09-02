@@ -333,7 +333,7 @@
                                 </div>
                                  {{#each address}}
                                            <div class="pay-top sin-payment">
-                                            <input id="payment-method" class="input-radio" type="radio" value="{{this.id}}" name="payment-address">
+                                            <input id="payment-address" class="input-radio" type="radio" value="'{{this._id}}'" name="payment-address">
                                             <label for="payment-method-3"> {{this.name}}  </label>
                                             <div class="payment-box payment_method_bacs">
                                              <p>{{this.address}} <br>

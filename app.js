@@ -28,16 +28,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/admin')));
 app.use(fileUpload())
 
-app.use(session({secret:"key"},
-{resave: false,
-saveUninitialized: false,
-cookie:{maxAge:6000}},
-    
+app.use(session({secret:"key",
+saveUninitialized:false,
+resave:false,
+cookie:{maxAge:600000}},
 ))
+
+
+
 db.connect((err)=>{
   if(err) console.log('connection error' + err)
   else console.log("database connected")
 })
+
+
 app.use((req, res, next) => {
   if (!req.user) {
     res.header("cache-control", "private,no-cache,no-store,must revalidate");
@@ -45,6 +49,7 @@ app.use((req, res, next) => {
   }
   next();
 });
+
 app.use((req, res, next) => {
   if (!req.admin) {
     res.header("cache-control", "private,no-cache,no-store,must revalidate");

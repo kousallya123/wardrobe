@@ -164,12 +164,14 @@ router.get('/confirmotp',(req,res)=>{
 })
 
 
-router.post('/confirmotp',(req,res)=>{
+router.post('/confirmotp',userAuth,(req,res)=>{
+  let signupData
   console.log("nnlasnclknlcn")
   console.log(req.body)
   console.log(signupData)
-    userHelpers.doOTPconfirm(req.body,signupData).then((response)=>{
+    userHelpers.doOTPconfirm(req.body,signupData,user).then((response)=>{
         if(response.status){
+          signupData=response.user
             console.log("bjkjbkjbxBKBJKXBkaBKXKKbjxkBkjsx")
             res.redirect('/')
         }
@@ -264,6 +266,8 @@ router.get('/view-order-products/:id',async(req,res)=>{
 router.get('/profile',userAuth,async(req,res)=>{
   let orders=await userHelpers.getUserOrders(req.session.user._id)
   let address=await userHelpers.getAddress(req.session.user._id)
+  console.log('ordersssssssss'+orders);
+  console.log('address'+address);
   res.render('user/user-profile',{user:req.session.user,orders,address})
 })
 
@@ -362,17 +366,30 @@ router.get('/edit_address/:id',(req,res)=>{
     res.render('user/wishlist',{'user':req.session.user._id,product}) 
   })
    
-router.post('/cancel_order',async(req,res)=>{
- let corder=await userHelpers.cancelOrder(req.session.user._id)
-  res.redirect('/profile')
+router.get('/cancel_order/:id',(req,res)=>{
+  console.log('id');
+  userHelpers.cancelOrder(req.params.id).then((response)=>{
+    res.json(response)
+  })
+ 
 
 })
 
 
-router.get('/delete_cart',async(req,res)=>{
-  let cart=await userHelpers.deleteCart(req.session.user._id).then((response)=>{
+router.get('/delete_cart/:id',(req,res)=>{
+   userHelpers.deleteCart(req.params.id).then((response)=>{
+    console.log(response);
+    res.json(response)
     // console.log(cart);
   })
+})
+
+router.get('/about',(req,res)=>{
+  res.render('user/about')
+})
+
+router.get('/contact',(req,res)=>{
+  res.render('user/contact')
 })
 
 

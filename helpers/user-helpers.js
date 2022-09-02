@@ -144,7 +144,7 @@ module.exports = {
         })
     },
     
-doOTPconfirm:(confirmOtp,userData)=>{
+    doOTPconfirm:(confirmOtp,userData)=>{
     console.log('hello0000000000');
     console.log(userData);
     console.log(confirmOtp);
@@ -384,13 +384,38 @@ doOTPconfirm:(confirmOtp,userData)=>{
             })
             
         },
+        // getUserOrders:(userId)=>{
+        //     return new Promise(async(resolve,reject)=>{
+        //         console.log(userId)
+        //         let orders=await db.get().collection(collection.ORDER_COLLECTION)
+        //         .find({userId:ObjectId(userId)}).sort({date:-1}).toArray()
+        //         console.log(orders)
+        //         resolve(orders)
+        //     })
+        // },
         getUserOrders:(userId)=>{
+           console.log(userId);
             return new Promise(async(resolve,reject)=>{
-                console.log(userId)
-                let orders=await db.get().collection(collection.ORDER_COLLECTION)
-                .find({userId:ObjectId(userId)}).sort({date:-1}).toArray()
-                console.log(orders)
-                resolve(orders)
+                let order = await db.get().collection(collection.ORDER_COLLECTION).aggregate([
+                    {
+                        $match:{ userId:ObjectId(userId)}
+                    },
+                    {
+                        $lookup:{
+                            from: collection.ADDRESS_COLLECTION,
+                            localField:'deliveryDetails',
+                            foreignField:'_id',
+                            as:'address'
+                        }
+                    },
+                    // {
+                    //     $unwind:'$address'
+                    // }
+                ]).toArray()
+    
+                resolve(order)
+                console.log('wofncnfjnfjnjcnkfjcnvkwjncfrnwcj');
+                console.log(order);
             })
         },
         getOrderProducts:(orderId)=>{
@@ -714,6 +739,7 @@ doOTPconfirm:(confirmOtp,userData)=>{
     
         },
         cancelOrder: (Id) => {
+            console.log(Id);
             console.log('order cancelled!!!!!!!!!!!!!!!!!!!');
             return new Promise((resolve, reject) => {
               console.log(Id);
@@ -723,7 +749,7 @@ doOTPconfirm:(confirmOtp,userData)=>{
                   { _id:ObjectId(Id) },
                   {$set:{status:'cancelled'}})
                 .then((response) => {
-                  resolve();
+                  resolve(response);
                   console.log(response);
 
                 });
@@ -742,18 +768,16 @@ doOTPconfirm:(confirmOtp,userData)=>{
                 });
             });
           },
-          deleteCart:(Id,userId)=>{
-            console.log(Id);
-            console.log('jjjcjjnccnmcbmnBm');
-            return new Promise ((resolve,reject)=>{
-               db.get().collection(collection.CART_COLLECTION).deleteOne({user:ObjectId(userId)}).then((response)=>{
-                resolve()
-               })
-                // console.log(response);
+          deleteCart:(Id)=>{
+            return new Promise((resolve,reject)=>{
+                console.log(Id);
+                db.get().collection(collection.CART_COLLECTION).deleteOne({_id:ObjectId(Id)})
+                .then((response)=>{
+                    resolve(response)
+                    console.log(response);
+                })
             })
-            
           }
-
 
         
         
